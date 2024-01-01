@@ -4,8 +4,8 @@ import { FaChartSimple } from "react-icons/fa6";
 
 const CourseCard = ({cardData,currentCard,setCurrentCard}) => {
   return (
-    <div>
-      <div className={`flex flex-col justify-between font-inter leading-7 ${currentCard === cardData.heading? "bg-richblack-5 shadow-[20px_20px_0px_0px_yellow]" : "bg-richblack-600" } p-4`}>
+    <div className='mb-10'>
+      <div className={`flex flex-col  justify-between font-inter leading-7 ${currentCard === cardData.heading? "bg-richblack-5 shadow-[20px_20px_0px_0px_yellow]" : "bg-richblack-600" } p-4`}>
         {/* upper box */}
         <div className='flex flex-col gap-3 pb-12 border-b-2 border-dashed border-richblack-25 '>
           <h3 className={`font-semibold text-xl font-inter leading-7 ${currentCard === cardData.heading? "text-richblack-800" : "text-richblack-25" }`}>{cardData.heading}</h3>

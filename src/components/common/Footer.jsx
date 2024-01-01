@@ -83,48 +83,52 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
-              <h1 className="text-richblack-50 font-semibold text-[16px]">
-                Plans
-              </h1>
+            <div className=" flex flex-row md:flex-col items-center justify-around md:justify-start md:items-start  w-full md:w-[48%] lg:w-[30%] mb-7 lg:pl-0 -mx-7 md:mx-0">
+              <div>
+                <h1 className="text-richblack-50 font-semibold text-[16px]">
+                  Plans
+                </h1>
 
-              <div className="flex flex-col gap-2 mt-2">
-                {Plans.map((ele, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                    >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
-                        {ele}
-                      </Link>
-                    </div>
-                  );
-                })}
+                <div className="flex flex-col gap-2 mt-2">
+                  {Plans.map((ele, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                      >
+                        <Link to={ele.split(" ").join("-").toLowerCase()}>
+                          {ele}
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
-                Community
-              </h1>
 
-              <div className="flex flex-col gap-2 mt-2">
-                {Community.map((ele, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                    >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
-                        {ele}
-                      </Link>
-                    </div>
-                  );
-                })}
+              <div>
+                <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
+                  Community
+                </h1>
+                <div className="flex flex-col gap-2 mt-2">
+                  {Community.map((ele, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                      >
+                        <Link to={ele.split(" ").join("-").toLowerCase()}>
+                          {ele}
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Section 2 */}
-          <div className="lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3 ml-8">
+          <div className="lg:w-[50%] flex  flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3 ml-8">
             {FooterLink2.map((ele, i) => {
               return (
                 <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">

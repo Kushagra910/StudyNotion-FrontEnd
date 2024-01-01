@@ -15,29 +15,29 @@ const Home = () => {
   return (
     <div>
       {/* section1 */}
-      <section className="relative mx mx-auto flex flex-col items-center w-11/12 text-white justify-between max-w-maxContent ">
+      <section className="relative mx mx-auto flex flex-col items-start md:items-center w-11/12 text-white justify-between max-w-maxContent ">
         <Link to={"/signup"}>
           <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit">
             {" "}
             {/*for-button*/}
-            <div className="flex items-center gap-2 rounded-full px-10 py-[5px] group-hover:bg-richblack-900">
+            <div className="flex items-center gap-2 rounded-full px-4 md:px-10 py-[6px] group-hover:bg-richblack-900">
               <p>Become an Instructor</p>
               <FaArrowRight />
             </div>
           </div>
         </Link>
-        <h1 className="text-center font-semibold text-4xl mt-7">
+        <h1 className="md:text-center font-semibold text-3xl md:text-4xl  mt-7">
           Empower Your Future with
           <HighlightText text={"Coding Skills"} />
         </h1>
-        <div className="w-[90%] text-center text-lg font-bold mt-4 text-richblack-300">
+        <div className="w-[90%] self-stretch md:text-center text-lg font-bold mt-4 text-richblack-300">
           With our online coding courses, you can learn at your own pace, from
           anywhere in the world, and get access to a wealth of resources,
           including hands-on projects, quizzes, and personalized feedback from
           instructors.
         </div>
         {/* buttons */}
-        <div className="flex flex-row gap-7 mt-8">
+        <div className="flex flex-row gap-7 mt-8 ml-2 md:ml-0">
           <CTAButton active={true} linkto={"/signup"}>
             {" "}
             {/*Call to action button*/}
@@ -50,15 +50,15 @@ const Home = () => {
         </div>
         {/* video */}
 
-        <div className=" shadow-custom-shadow-2  mx-3 my-12 relative">
-          <div className="bg-custom-gradient-0 w-full h-full opacity-md blur-xl absolute py-40 px-40 z-0 top-n8 "></div>
+        <div className=" shadow-custom-shadow-2 mr-10  md:mx-3 my-12 relative" >
+          <div className="bg-custom-gradient-0 w-full h-full opacity-md blur-xl absolute z-0 top-n8 "></div>
           <video muted loop autoPlay className="transform z-20">
             <source src={Banner} type="video/mp4"></source>
           </video>
         </div>
 
         {/* Code Section 1 */}
-        <div>
+        <div >
           <CodeBlocks
             position={"lg:flex-row"}
             heading={
@@ -117,11 +117,11 @@ const Home = () => {
 
       <div className="bg-pure-greys-5 text-richblack-700">
         {/* subsection1 */}
-        <div className="homepage_bg h-[310px] ">
-          <div className="w-11/12 max-w-maxContent flex items-center justify-center h-[100%] gap-5 mx-auto">
-            <div className="flex flex-row gap-7 text-white">
+        <div className="homepage_bg h-[250px] md:h-[310px] ">
+          <div className="w-11/12 max-w-maxContent flex items-center justify-center mt-14 md:mt-0 h-[100%] gap-5 mx-auto">
+            <div className="flex flex-row gap-2 md:gap-7 text-white ">
               <CTAButton active={true} linkto={"/signup"}>
-                <div className="flex flex-row gap-3 items-center">
+                <div className="flex flex-row gap-1 md:gap-3 items-center">
                   Explore Full Catalog <FaArrowRight />
                 </div>
               </CTAButton>
@@ -134,13 +134,13 @@ const Home = () => {
         </div>
 
         {/* subsection2 */}
-        <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between mt-6">
-          <div className="flex flex-row gap-7 mb-14 mt-20">
-            <div className="font-inter text-4xl font-semibold w-[45%] ml-10">
+        <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between  md:mt-6">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-7 mb-14 mt-10 md:mt-20">
+            <div className="font-inter text-3xl md:text-4xl font-semibold w-[98%] md:w-[45%] md:ml-10">
               Get the skills you need for a{" "}
               <HighlightText text={"Job that is in demand"} />
             </div>
-            <div className="flex flex-col gap-10 justify-between w-[40%] items-start font-inter text-base font-medium">
+            <div className="flex flex-col gap-10 justify-between w-[98%] md:w-[40%] items-start font-inter text-base font-medium">
               <p className="text-[16px] font-inter text-md">
                 The modern StudyNotion is the dictates its own terms. Today, to
                 be a competitive specialist requires more than professional
@@ -164,7 +164,7 @@ const Home = () => {
               {/* Instructor Section */}
               <InstructorSection/>
 
-              <h2 className="text-center text-4xl font-semibold mt-24">Review from Other Learners</h2>
+              <h2 className="md:text-center text-3xl md:text-4xl font-semibold mt-24">Review from Other Learners</h2>
 
               {/* Review Slider Section */}
               

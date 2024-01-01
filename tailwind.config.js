@@ -138,6 +138,7 @@ module.exports = {
         'custom-shadow-1': '0px 0px 10px 10px rgba(0, 0, 156, 1)',
         'custom-shadow-2': '20px 20px 0px 0px #F5F5F5',
         'custom-shadow-3': '-20px -20px 0px 0px #F5F5F5',
+        'custom-box-shadow':' 2px 2px 0px 0px rgba(255, 255, 255, 0.51)',
       },
     },
   },
