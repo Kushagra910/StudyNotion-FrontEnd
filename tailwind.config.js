@@ -137,6 +137,7 @@ module.exports = {
       boxShadow: {
         'custom-shadow-1': '0px 0px 10px 10px rgba(0, 0, 156, 1)',
         'custom-shadow-2': '20px 20px 0px 0px #F5F5F5',
+        'custom-shadow-3': '-20px -20px 0px 0px #F5F5F5',
       },
     },
   },
