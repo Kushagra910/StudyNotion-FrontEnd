@@ -7,6 +7,9 @@ import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/HomePage/CodeBlocks";
 import TimelineSection from "../components/core/HomePage/TimelineSection";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
+import Footer from "../components/common/Footer"
 
 const Home = () => {
   return (
@@ -47,8 +50,8 @@ const Home = () => {
         </div>
         {/* video */}
 
-        <div className=" shadow-custom-shadow-2  mx-3 my-12 relative perspective-20">
-          <div className="bg-custom-gradient-0 opacity-md blur-xl absolute py-52 px-96 transform z-0 top-n8"></div>
+        <div className=" shadow-custom-shadow-2  mx-3 my-12 relative">
+          <div className="bg-custom-gradient-0 w-full h-full opacity-md blur-xl absolute py-40 px-40 z-0 top-n8 "></div>
           <video muted loop autoPlay className="transform z-20">
             <source src={Banner} type="video/mp4"></source>
           </video>
@@ -106,6 +109,8 @@ const Home = () => {
             }
           />
         </div>
+        
+        <ExploreMore/>
       </section>
 
       {/* section2 */}
@@ -129,20 +134,20 @@ const Home = () => {
         </div>
 
         {/* subsection2 */}
-        <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between">
-          <div className="flex flex-row gap-7 mb-10 mt-20">
+        <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between mt-6">
+          <div className="flex flex-row gap-7 mb-14 mt-20">
             <div className="font-inter text-4xl font-semibold w-[45%] ml-10">
               Get the skills you need for a{" "}
               <HighlightText text={"Job that is in demand"} />
             </div>
-            <div className="flex flex-col gap-10 justify-between w-[40%] items-start">
+            <div className="flex flex-col gap-10 justify-between w-[40%] items-start font-inter text-base font-medium">
               <p className="text-[16px] font-inter text-md">
                 The modern StudyNotion is the dictates its own terms. Today, to
                 be a competitive specialist requires more than professional
                 skills.
               </p>
               <CTAButton active={true} linkto={"/signup"}>
-                <div>Learn More</div>
+                <div >Learn More</div>
               </CTAButton>
             </div>
           </div>
@@ -154,7 +159,19 @@ const Home = () => {
         </div>
       </div>
       {/* section3 */}
+
+      <div className=" w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between bg-richblack-900 text-white">
+              {/* Instructor Section */}
+              <InstructorSection/>
+
+              <h2 className="text-center text-4xl font-semibold mt-24">Review from Other Learners</h2>
+
+              {/* Review Slider Section */}
+              
+      </div>
       {/* footer */}
+
+      <Footer/>
     </div>
   );
 };
