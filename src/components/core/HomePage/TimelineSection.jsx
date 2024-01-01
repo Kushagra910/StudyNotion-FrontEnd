@@ -13,18 +13,18 @@ const timeline = [
   },
   {
     Logo: Logo2,
-    Heading : "Leadership",
-    Descripton : "Fully commited to the success company",
+    Heading : "Responsibility",
+    Descripton : "Students will always be our top priority",
   },
   {
     Logo: Logo3,
-    Heading : "Leadership",
-    Descripton : "Fully commited to the success company",
+    Heading : "Flexibility",
+    Descripton : "The ability to switch is an important skills",
   },
   {
     Logo: Logo4,
-    Heading : "Leadership",
-    Descripton : "Fully commited to the success company",
+    Heading : "Solve the problem",
+    Descripton : "Code your way to a solution",
   },
 ];
 
@@ -33,18 +33,18 @@ const timeline = [
 const TimelineSection = () => {
   return (
     <div>
-      <div className='flex flex-row gap-15 items-center'>
+      <div className='flex flex-row gap-16 items-center '>
 
           {/* Left box */}
-          <div className='w-[45%] flex flex-col gap-3'>
+          <div className='w-[45%] flex flex-col gap-8'>
             {  timeline.map((element,index)=>{
                 return (
                     <div className='flex flex-row gap-6 ' key={index}>
-                        <div className='w-[50px] h-[50px] bg-white flex items-center'>
+                        <div className='w-[50px] h-[50px] flex items-center justify-center rounded-full shadow-md shadow-blue-200'>
                             <img src={element.Logo} alt={"logo"}/>
                         </div>
                         <div>
-                          <h2 className='font-semibold text-[18px]'>{element.Heading}</h2>
+                          <h2 className='font-semibold text-[18px] font-inter  leading-7'>{element.Heading}</h2>
                           <p className='text-base'>{element.Descripton}</p>
                         </div>
                     </div>
@@ -53,9 +53,10 @@ const TimelineSection = () => {
           </div>
 
           {/* right Box */}
-          <div className='relative shadow-blue-200'>
-                <img src={timelineImage} alt={"Timeline"} className='shadow-white object-fit '/>
-                <div className='absolute bg-caribbeangreen-700 flex text-white uppercase py-6 left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+          <div className='relative  z-10 '>
+                <div className='bg-blue w-full  rounded-full shadow-4xl bg-blue-200 blur-3xl z-0 top-12 h-2/3 absolute '></div>
+                <img src={timelineImage} alt={"Timeline"} className='shadow-white relative object-fit z-10'/>
+                <div className='absolute bg-caribbeangreen-700 flex text-white uppercase py-6 left-[50%] translate-x-[-50%] translate-y-[-50%]  z-20'>
                   <div className='flex gap-5 items-center border-r border-caribbeangreen-300 px-7'>
                     <p className='text-3xl font-bold'>10</p>
                     <p className='text-caribbeangreen-300 text-sm'>Years of Experience</p>
