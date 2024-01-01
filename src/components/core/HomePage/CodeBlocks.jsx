@@ -34,7 +34,7 @@ const CodeBlocks = ({
         </div>
       </div>
       {/* section2  Type Animation*/}
-      <div className="h-fit flex text-[10px] w-[100%] py-4 lg:w-[500px] bg-richblack-800 opacity-100  relative perspective-10 ">
+      <div className="h-fit flex text-[10px] w-[100%] py-4 lg:w-[500px] bg-richblack-800 opacity-100  relative  ">
         <div className={`w-[342.95px] h-[257.05px] ${backgroundGradient}rounded-full absolute top-[-15px] left-[-45px] blur-xl z-0 opacity-50`} ></div>
         <div className="text-center flex flex-col w-[10%] text-sm leading-5 text-richblack-200 relative font-inter font-bold self-stretch  z-20">
           <p>1</p>
