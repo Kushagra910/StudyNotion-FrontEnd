@@ -21,7 +21,7 @@ const LearningLanguageSection = () => {
 
             <div className='flex flex-col md:flex-row md:items-center justify-center  mt-5'>
 
-                  <img src={know_your_progress} alt="Know your progress Image" className='object-contain md:-mr-40'></img>
+                  <img src={know_your_progress} alt="Know your progress" className='object-contain md:-mr-40'></img>
                   <img src={compare_with_others} alt="Compar with Others" className='object-fit md:ml-7'></img>
                   <img src={plan_your_lessons} alt="Plan form lessons" className='object-fit md:-ml-36'></img>
 
@@ -29,7 +29,7 @@ const LearningLanguageSection = () => {
 
             <div className='w-[45%] md:w-fit font-inter '>
               <CTAButton active={true} linkto={"/signup"}>
-                    <p>Lear More</p>
+                    <p>Learn More</p>
               </CTAButton>
             </div>
        </div>
