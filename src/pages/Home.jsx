@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <div>
       {/* section1 */}
-      <section className="relative mx mx-auto flex flex-col items-start md:items-center w-11/12 text-white justify-between max-w-maxContent ">
+      <section className="relative mx mx-auto flex flex-col items-start md:items-center w-11/12 text-white justify-between max-w-maxContent z-0 ">
         <Link to={"/signup"}>
-          <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit">
+          <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit z-0">
             {" "}
             {/*for-button*/}
             <div className="flex items-center gap-2 rounded-full px-4 md:px-10 py-[6px] group-hover:bg-richblack-900">

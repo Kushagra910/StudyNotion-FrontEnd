@@ -2,8 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import {AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai'
 import {Link, useNavigate} from 'react-router-dom'
-import {toast} from 'react-hot-toast';
-// import { login } from "../../../services/operations/authAPI"
+import { login } from "../../../services/operations/authApi"
 import { useDispatch } from 'react-redux';
  
 
@@ -27,8 +26,7 @@ const LoginForm = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // dispatch(login(formData.email, formData.password, navigate))
-    toast.success("Logged In");
+    dispatch(login(formData.email, formData.password, navigate));
   }
 
   return (
@@ -76,7 +74,8 @@ const LoginForm = () => {
           </Link>
         </label>
 
-        <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[1px] mt-5'>Sign In</button>
+        <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-5' 
+        type='submit'>Sign In</button>
      </form>
   )
 }

@@ -7,9 +7,10 @@ import { useDispatch } from "react-redux";
 import {ACCOUNT_TYPE} from "../../../data/constants"
 import { tabData } from "../../../data/constants";
 import { setSignupData } from "../../../slices/authSlice";
+import { sendOtp } from "../../../services/operations/authApi";
 import Tab from "../../common/Tab";
 
-const SignupForm = ({setIsLoggedIn}) => {
+const SignupForm = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const SignupForm = ({setIsLoggedIn}) => {
     dispatch(setSignupData(signupData));
 
     // Send OTP to user for verification
-    // dispatch(sendOtp(formData.email, navigate));
+    dispatch(sendOtp(formData.email, navigate));
     
     // Reset
     setFormData({
@@ -179,7 +180,7 @@ const SignupForm = ({setIsLoggedIn}) => {
 
         </div>
 
-        <button className='w-full bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-5'>Create Account</button>
+        <button type="submit" className='w-full bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-5'>Create Account</button>
       </form>
     </div>
   );

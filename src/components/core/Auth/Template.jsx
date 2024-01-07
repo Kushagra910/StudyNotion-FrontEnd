@@ -5,9 +5,9 @@ import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
 import {FcGoogle} from 'react-icons/fc'
 
-const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
+const Template = ({title,desc1,desc2,image,formtype}) => {
   return (
-    <div className='flex w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 justify-between overflow-hidden'>
+    <div className='flex w-11/12 max-w-[1160px] py-20 mx-auto gap-x-12 justify-between overflow-hidden'>
       <div className='w-11/12 max-w-[450px]'>
         <h1 className='text-richblack-5 font-semibold text-[1.875rem] leading-[2.375rem]'>{title}</h1>
         <p className='text-[1.125rem] leading-[1.625rem] mt-4'>
@@ -17,8 +17,8 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
         </p>
 
         {formtype === "signup"?
-        (<SignupForm  setIsLoggedIn={setIsLoggedIn}/>):
-        (<LoginForm setIsLoggedIn={setIsLoggedIn}/>)}
+        (<SignupForm  />):
+        (<LoginForm />)}
 
         <div className='flex w-full items-center my-4 gap-x-2'>
           <div className='h-[1px] bg-richblack-700 w-full'></div>

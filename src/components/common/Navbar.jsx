@@ -9,16 +9,16 @@ import { categories } from '../../services/apis'
 import { apiConnector } from '../../services/apiConnector'
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const subLinks = [
-  {
-    title: "python",
-   link : "/catalog/python"
-  },
-   {
-    title:"web dev",
-    link : "/catalog/web-development"
-   },
-]
+// const subLinks = [
+//   {
+//     title: "python",
+//    link : "/catalog/python"
+//   },
+//    {
+//     title:"web dev",
+//     link : "/catalog/web-development"
+//    },
+// ]
 
 const Navbar = () => {
 
@@ -26,22 +26,23 @@ const Navbar = () => {
   const {user} = useSelector((state) => state.profile);
   const {token} = useSelector((state)=>state.auth);
 
-  // const [subLinks,setSubLinks] = useState([]);
+  const [subLinks,setSubLinks] = useState([]);
 
 
-  // const fetchSublinks = async()=>{
-  //   try{
-  //     const result = await apiConnector("GET",categories.CATEGORIES_API);
-  //     console.log("printing sublink result" , result);
-  //     setSubLinks(result.data.data);
-  //     } catch(error){
-  //         console.log("Could not fetch the Category list");
-  //     }
-  // }
+  const fetchSublinks = async()=>{
+    try{
+      const result = await apiConnector("GET",categories.CATEGORIES_API);
+      console.log("printing sublink result" , result);
+      setSubLinks(result.data.allCategories);
+      } catch(error){
+          console.error(error);
+          console.log("Could not fetch the Category list");
+      }
+  }
 
-  // useEffect(()=>{
-  //     // fetchSublinks();
-  // },[]);
+  useEffect(()=>{
+      fetchSublinks();
+  },[]);
 
   const location = useLocation();
   const matchRoute = (route) =>{
@@ -49,7 +50,7 @@ const Navbar = () => {
   } 
   return (
     <div className='flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700'>
-      <div className='w-11/12 flex max-w-maxContent justify-between'>
+      <div className='w-11/12 flex max-w-maxContent items-center justify-between'>
         {/* Image added */}
           <Link to="/">
               <img src={logo}  width={160} height={32} loading='lazy' />
@@ -71,13 +72,13 @@ const Navbar = () => {
                                   bg-richblack-5 p-4 lg:w-[300px] text-richblack-900 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100'>
 
                                     <div className='absolute left-[49%] top-0 translate-x-[80%]
-                                    translate-y-[-45%] h-6 w-6 rotate-45 rounded bg-richblack-5'></div>
+                                    translate-y-[-45%] h-6 w-6 rotate-45 rounded bg-richblack-5 z-10'></div>
                                     {
                                       subLinks.length ? (
                                         subLinks.map((subLink,index)=>(
                                           <Link to={subLink.link} key={index}>
                                               <p>
-                                                {subLink.title}
+                                                {subLink.name}
                                               </p>
                                           </Link>
                                         ))
@@ -118,7 +119,7 @@ const Navbar = () => {
                 {
                   token === null  && (
                     <Link to="/login">
-                      <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[3px] text-richblack-100 rounded-md' >
+                      <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-md' >
                         Log in
                       </button>
                     </Link>
@@ -127,7 +128,7 @@ const Navbar = () => {
                 {
                   token === null  && (
                     <Link to="/signup">
-                      <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[3px] text-richblack-100 rounded-md'  >
+                      <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-md'  >
                         Sign Up
                       </button>
                     </Link>

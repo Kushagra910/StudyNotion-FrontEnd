@@ -55,7 +55,7 @@ const TimelineSection = () => {
           {/* right Box */}
           <div className='relative  z-10 '>
                 <div className='bg-blue w-full  rounded-full shadow-4xl bg-blue-200 blur-2xl md:blur-3xl z-0 top-12 h-2/3 absolute '></div>
-                <img src={timelineImage} alt={"Timeline"} className='shadow-white relative object-fit z-10'/>
+                <img src={timelineImage} alt={"Timeline"} className='shadow-white relative object-fit z-10' loading='lazy'/>
                 <div className='absolute bg-caribbeangreen-700 flex  flex-col md:flex-row text-white uppercase py-6 left-[50%] translate-x-[-50%] translate-y-[-50%]  z-20 gap-10 md:gap-0'>
                   <div className='flex gap-5 items-center border-r border-caribbeangreen-300 px-7 '>
                     <p className='text-3xl font-bold'>10</p>

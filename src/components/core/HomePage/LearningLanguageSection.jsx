@@ -21,9 +21,9 @@ const LearningLanguageSection = () => {
 
             <div className='flex flex-col md:flex-row md:items-center justify-center  mt-5'>
 
-                  <img src={know_your_progress} alt="Know your progress" className='object-contain md:-mr-40'></img>
-                  <img src={compare_with_others} alt="Compar with Others" className='object-fit md:ml-7'></img>
-                  <img src={plan_your_lessons} alt="Plan form lessons" className='object-fit md:-ml-36'></img>
+                  <img src={know_your_progress} alt="Know your progress" className='object-contain md:-mr-40' loading='lazy'></img>
+                  <img src={compare_with_others} alt="Compar with Others" className='object-fit md:ml-7' loading='lazy'></img>
+                  <img src={plan_your_lessons} alt="Plan form lessons" className='object-fit md:-ml-36' loading='lazy'></img>
 
             </div>
 
