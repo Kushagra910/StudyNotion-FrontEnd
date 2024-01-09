@@ -20,6 +20,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 //    },
 // ]
 
+
+
 const Navbar = () => {
 
   const {totalItems} = useSelector((state)=>state.cart);
@@ -53,7 +55,7 @@ const Navbar = () => {
       <div className='w-11/12 flex max-w-maxContent items-center justify-between'>
         {/* Image added */}
           <Link to="/">
-              <img src={logo}  width={160} height={32} loading='lazy' />
+              <img src={logo}  width={160} height={32} loading='lazy' alt='logo'/>
           </Link>
 
           {/* Nav links */}
@@ -74,6 +76,7 @@ const Navbar = () => {
                                     <div className='absolute left-[49%] top-0 translate-x-[80%]
                                     translate-y-[-45%] h-6 w-6 rotate-45 rounded bg-richblack-5 z-10'></div>
                                     {
+
                                       subLinks.length ? (
                                         subLinks.map((subLink,index)=>(
                                           <Link to={subLink.link} key={index}>
@@ -135,6 +138,7 @@ const Navbar = () => {
                   )
                 }
                 {
+        
                   token !== null && <ProfileDrop/>
                 }
           </div>

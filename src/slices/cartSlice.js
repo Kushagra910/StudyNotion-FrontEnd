@@ -44,7 +44,7 @@ const cartSlice = createSlice({
         state.cart.splice(index, 1);
         // Update to localstorage
         localStorage.setItem("cart", JSON.stringify(state.cart));
-        localStorage.setItem("total", JSON.stringify(state.total));
+        localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice));
         localStorage.setItem("totalItems", JSON.stringify(state.totalItems));
         // show toast
         toast.success("Course removed from cart");
@@ -58,17 +58,7 @@ const cartSlice = createSlice({
       // update the local storage 
       localStorage.removeItem("cart");
       localStorage.removeItem('totalItems');
-      localStorage.removeItme("totalPrice");
-      toast.notify('Cart has been reset!', {
-        duration: 3000, // Set the duration for how long the toast should be visible (in milliseconds)
-        position: 'bottom-center', // Set the position of the toast
-        style: {
-          border: '2px solid #4CAF50',
-          padding: '16px',
-          color: '#4CAF50',
-          background: '#f8f8f8',
-        },
-      });
+      localStorage.removeItem("totalPrice");
     }
   }
 })

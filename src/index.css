@@ -2,3 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y:hidden;
+}
+
+.error-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #4a5568; /* Adjusted background color */
+  border: 1px solid #2d3748; /* Border color for the adjusted background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.error-message {
+  color: #cbd5e0; /* Adjusted text color */
+  font-size: 18px;
+  margin: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

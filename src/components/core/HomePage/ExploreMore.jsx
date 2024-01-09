@@ -7,7 +7,7 @@ const tabsName = [
   "Free",
   "New to coding",
   "Most popular",
-  "Skill paths",
+  "Skills paths",
   "Career paths"
 ];
 
@@ -38,7 +38,7 @@ const ExploreMore = () => {
             return (
               <div className={`text-xs md:text-[16px] flex items-center  justify-between md:gap-2 
               ${currentTab === element ? "bg-richblack-900 text-richblack-5 font-medium" : "text-richblack-200"} rounded-full transition-all duration-200 cursor-pointer 
-              hover:bg-richblack-500 hover:text-richblack-5 px-1 md:px-7 py-2`} key={index}
+              hover:bg-richblack-500 hover:text-richblack-5  px-1 md:px-7 py-2`} key={index}
               onClick={()=>{setMyCards(element)}}>
                 {element}
               </div>
