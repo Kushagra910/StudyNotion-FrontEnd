@@ -5,12 +5,25 @@ import {toast} from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {ACCOUNT_TYPE} from "../../../data/constants"
-import { tabData } from "../../../data/constants";
 import { setSignupData } from "../../../slices/authSlice";
 import { sendOtp } from "../../../services/operations/authApi";
 import Tab from "../../common/Tab";
 
 const SignupForm = () => {
+
+    // data to pass to Tab component
+    const tabData = [
+      {
+        id: 1,
+        tabName: "Student",
+        type: ACCOUNT_TYPE.STUDENT,
+      },
+      {
+        id: 2,
+        tabName: "Instructor",
+        type: ACCOUNT_TYPE.INSTRUCTOR,
+      },
+    ]
 
   const navigate = useNavigate();
   const dispatch = useDispatch();

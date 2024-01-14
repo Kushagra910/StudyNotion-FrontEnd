@@ -11,6 +11,9 @@ import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import MyProfile from "./components/core/Dashboard/MyProfile";
+import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -43,14 +46,6 @@ function App() {
           }
         />
         <Route
-          path="/error"
-          element={
-            <OpenRoute>
-              <Error />
-            </OpenRoute>
-          }
-        />
-        <Route
           path="/update-password/:id"
           element={
             <OpenRoute>
@@ -74,14 +69,26 @@ function App() {
             </OpenRoute>
           }
         />
+        <Route path="/contact" element={<Contact />} />
+
         <Route
-          path="/contact"
           element={
-            <OpenRoute>
-              <Contact />
-            </OpenRoute>
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
           }
-        />
+        >
+          <Route
+            path="/dashboard/my-profile"
+            element={
+              <ProtectedRoute>
+                <MyProfile />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
