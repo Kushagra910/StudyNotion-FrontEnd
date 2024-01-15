@@ -21,8 +21,8 @@ const Sidebar = () => {
   }
 
   return (
-    <div>
-      <div className="flex min-w-[222px] flex-col border-r-[1px] border-r-richblack-700 h-[calc(100vh-3.5rem)] bg-richblack-800 py-10">
+    <div className="text-white">
+      <div className="flex min-w-[222px]  flex-col border-r-[1px] border-r-richblack-700 h-[calc(100vh-3.5rem)] bg-richblack-800 py-10">
         <div className="flex flex-col">
           {sidebarLinks.map((link) => {
             if (link.type && user.accountType !== link.type) return null;
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 btn2Handler: () => setConfirmationModal(null),
               })
             }
-            className="text-sm font-medium text-richblack-300"
+            className="text-sm font-medium text-richblack-300 px-8 py-2 "
           >
           
           <div className="flex itmes-center gap-x-2">

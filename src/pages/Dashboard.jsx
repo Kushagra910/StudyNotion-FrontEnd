@@ -14,7 +14,7 @@ const Dashboard = () => {
   return (
     <div className="relative flex min-h-[calc(100vh-3.5rem)]">
       <Sidebar />
-      <div className="h-[calc(100vh-3.5rem) overflow-auto">
+      <div className="h-[calc(100vh-3.5rem) overflow-auto flex-1">
         <div className="mx-auto w-11/12 max-w-[1000px] py-10">
           <Outlet />
         </div>

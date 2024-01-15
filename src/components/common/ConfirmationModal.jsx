@@ -1,29 +1,31 @@
-import React from 'react'
-import IconBtn from './IconBtn'
+import React from "react";
+import IconBtn from "./IconBtn";
 
-const ConfirmationModal = ({modalData}) => {
+const ConfirmationModal = ({ modalData }) => {
   return (
-    <div className='text-white'>
-      <div>
-         <p>
+    <div className="fixed z-[100] !mt-0 grid place-items-center inset-0 overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
+      <div className="w-11/12 max-w-[350px] rounded-lg border-[1px] border-richblack-400 p-6 bg-richblack-800 ">
+        <p className="text-2xl font-semibold text-richblack-5">
           {modalData.text1}
-         </p>
-         <p>
+        </p>
+        <p className="mt-3 mb-5 leading-6 text-richblack-200">
           {modalData.text2}
-         </p>
-         <div>
-          <IconBtn 
+        </p>
+        <div className="flex items-center gap-x-4">
+          <IconBtn
             onclick={modalData?.btn1Handler}
             text={modalData?.btn1Text}
-          /> 
-          <button onClick={modalData?.btn2Handler}>
+          />
+          <button
+            className="cursor-pointer rounded-md bg-richblack-200 py-[8px] px-[20px] font-semibold text-richblack-900"
+            onClick={modalData?.btn2Handler}
+          >
             {modalData?.btn2Text}
           </button>
-         </div>
-
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ConfirmationModal
+export default ConfirmationModal;
