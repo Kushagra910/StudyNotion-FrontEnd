@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import React, { Suspense } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Navbar from "./components/common/Navbar";
@@ -6,14 +7,14 @@ import OpenRoute from "./components/core/Auth/OpenRoute";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
-import Error from "./pages/Error";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MyProfile from "./components/core/Dashboard/MyProfile";
 import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
-import Dashboard from "./pages/Dashboard";
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Error = React.lazy(() => import("./pages/Error"));
 
 function App() {
   return (
@@ -73,9 +74,10 @@ function App() {
 
         <Route
           element={
-            <ProtectedRoute>
+            <Suspense fallback={
+              <div className="spinner"></div>}>
               <Dashboard />
-            </ProtectedRoute>
+            </Suspense>
           }
         >
           <Route
@@ -88,7 +90,14 @@ function App() {
           />
         </Route>
 
-        <Route path="*" element={<Error />} />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<div className="spinner w-full h-full"></div>}>
+              <Error />
+            </Suspense>
+          }
+        />
       </Routes>
     </div>
   );
