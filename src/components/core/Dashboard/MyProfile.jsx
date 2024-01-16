@@ -113,7 +113,9 @@ const MyProfile = () => {
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-5">{
+                user?.additionalDetails?.dateOfBirth ?? "Add Date of Birth"
+              }
               </p>
             </div>
           </div>

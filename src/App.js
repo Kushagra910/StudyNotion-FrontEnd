@@ -11,10 +11,11 @@ import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import MyProfile from "./components/core/Dashboard/MyProfile";
 import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
+import Settings from "./components/core/Dashboard/settings/Settings";
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Error = React.lazy(() => import("./pages/Error"));
+const MyProfile = React.lazy(()=>import('./components/core/Dashboard/MyProfile'));
 
 function App() {
   return (
@@ -83,11 +84,14 @@ function App() {
           <Route
             path="/dashboard/my-profile"
             element={
+            <Suspense fallback={<div className="spinner w-screen h-screen" ></div>}>
               <ProtectedRoute>
                 <MyProfile />
               </ProtectedRoute>
+            </Suspense>
             }
           />
+          <Route path="/dashboard/Settings" element={<Settings/>}/>
         </Route>
 
         <Route
