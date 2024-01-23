@@ -1,8 +1,6 @@
 import React from "react";
 import ContactUsForm from "../components/contactPage/ContactUsForm";
 import Footer from "../components/common/Footer";
-// import "../App.css"
-import toast from "react-hot-toast";
 
 const Contact = () => {
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import ChangeProfilePicture from './ChangeProfilePicture'
 import EditProfile from './EditProfile'
+import ChangePassword from './ChangePassword'
+import DeleteAccount from './DeleteAccount'
 
 const Settings = () => {
   return (
@@ -12,7 +14,9 @@ const Settings = () => {
       {/* Section -3 Edit Profile Information } */}
       <EditProfile/>
       {/* Section - 4 Change password  */}
+      <ChangePassword/>
       {/* Section - 5 Delete Account */}
+      <DeleteAccount/>
     </div>
   )
 }

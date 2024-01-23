@@ -8,7 +8,6 @@ import rootReducer from "./reducer";
 import {configureStore} from "@reduxjs/toolkit"
 import { Toaster } from "react-hot-toast";
 
-
 // temporary store
 const store = configureStore({
   reducer:rootReducer,
