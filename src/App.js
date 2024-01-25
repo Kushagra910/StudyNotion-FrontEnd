@@ -17,6 +17,8 @@ import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import Cart from "./components/core/Dashboard/cart/Cart";
 import { ACCOUNT_TYPE } from "./data/constants";
 import { useSelector } from "react-redux";
+import AddCourse from "./components/core/Dashboard/addCourse/addCourse";
+
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Error = React.lazy(() => import("./pages/Error"));
 const MyProfile = React.lazy(() =>
@@ -105,6 +107,24 @@ function App() {
               <Route
                 path="/dashboard/enrolled-courses"
                 element={<EnrolledCourses />}
+              />
+              <Route path="/dashboard/cart" element={<Cart />} />
+            </>
+          )}
+          {user?.accountType === ACCOUNT_TYPE.STUDENT && (
+            <>
+              <Route
+                path="/dashboard/enrolled-courses"
+                element={<EnrolledCourses />}
+              />
+              <Route path="/dashboard/cart" element={<Cart />} />
+            </>
+          )}
+          {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+            <>
+              <Route
+                path="/dashboard/add-course"
+                element={<AddCourse />}
               />
               <Route path="/dashboard/cart" element={<Cart />} />
             </>
