@@ -53,13 +53,13 @@ const ChangePassword = () => {
     }
   }
   return (
-    <div>
-      <form className="flex flex-col" onSubmit={submitHandler}>
-        <h2>Password</h2>
-        <div>
-          <div className="relative">
+    <div  >
+      <form className="flex gap-2 flex-col" onSubmit={submitHandler}>
+        <h2 className='text-richblack-5 font-inter text-xl font-medium '>Password</h2>
+        <div className="flex flex-col md:flex-row gap-3  items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12 mb-2 text-richblack-5" >
+          <div className="relative flex gap-3">
             <label htmlFor="oldPassword">
-              Old Password <span>*</span>
+              Old Password <span className="text-pink-200">*</span>
               <input
                 required
                 placeholder="Enter Old password"
@@ -68,9 +68,10 @@ const ChangePassword = () => {
                 value={formData.oldPassword}
                 id="oldPassword"
                 onChange={changeHandler}
+                className="form-style"
               />
               <span
-                className=" right-3 top-[38px] cursor-pointer "
+                className=" right-3 top-[38px] cursor-pointer absolute  md:left-[63%] "
                 onClick={() => setOldPassword((prev) => !prev)}
               >
                 {oldPassword ? (
@@ -92,9 +93,10 @@ const ChangePassword = () => {
                 value={formData.newPassword}
                 onChange={changeHandler}
                 placeholder="Enter new password"
+                className="form-style"
               />
               <span
-                className="right-3 top-[38px] cursor-pointer "
+                className="right-3 top-[38px] cursor-pointer absolute md:left-[63%]"
                 onClick={() => setNewPassword((prev) => !prev)}
               >
                 {newPassword ? (
@@ -116,9 +118,10 @@ const ChangePassword = () => {
                 value={formData.confirmPassword}
                 id="confirmPassword"
                 onChange={changeHandler}
+                className="form-style z-0"
               />
               <span
-                className=" right-3 top-[38px] cursor-pointer "
+                className=" right-3 top-[38px] cursor-pointer  absolute md:left-[59%] z-10"
                 onClick={() => setConfirmPassword((prev) => !prev)}
               >
                 {confirmPassword ? (

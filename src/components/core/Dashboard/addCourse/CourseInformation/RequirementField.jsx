@@ -30,20 +30,20 @@ const RequirementField = ({name,label,register,errors,setValue,getValues}) => {
     setRequirementList(updatedRequirementList);
   }
   return (
-    <div className='text-white'>
-      <label htmlFor={name}>{label}<sup>*</sup></label>
-      <div>
+    <div  className="flex flex-col space-y-2">
+      <label  className="text-sm text-richblack-5" htmlFor={name}>{label}<sup className="text-pink-200">*</sup></label>
+      <div className="flex flex-col items-start space-y-2">
         <input
           type='text'
           id={name}
           value={requirement}
           onChange={(e)=>setRequirement(e.target.value)}
-          className='w-full text-black'
+          className="form-style w-full"
         />
         <button 
           type='button'
           onClick={handleAddRequirement}
-          className='font-semibold text-yellow-50'
+          className="font-semibold text-yellow-50"
           >
           Add
         </button>
@@ -51,12 +51,12 @@ const RequirementField = ({name,label,register,errors,setValue,getValues}) => {
 
       {
         requirementList.length > 0 && (
-          <ul>
+          <ul className="mt-2 list-inside list-disc">
             {
               requirementList.map((element,index)=>(
-                <li key={index} className='flex items-center text-richblack-5'>
+                <li key={index}  className="flex items-center text-richblack-5">
                   <span>{element}</span>
-                  <button type='button' onClick={() => handleRemoveRequirement(index)} className='text-xs text-pure-greys-300'>clear</button>
+                  <button type='button' onClick={() => handleRemoveRequirement(index)}  className="ml-2 text-xs text-pure-greys-300 ">clear</button>
                 </li>
               ))
             }
@@ -65,7 +65,7 @@ const RequirementField = ({name,label,register,errors,setValue,getValues}) => {
       }
       {
         errors[name] && (
-          <span>
+          <span className="ml-2 text-xs tracking-wide text-pink-200">
             {label} is required**
           </span>
         )
