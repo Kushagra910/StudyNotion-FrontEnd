@@ -53,7 +53,7 @@ export default function RenderSteps() {
                 <div
                   className={`h-[calc(34px/2)] w-[33%]  border-dashed border-b-2 ${
                   step > item.id  ? "border-yellow-50" : "border-richblack-500"
-                } `}
+                } ` }
                 ></div>
               </>
             )}

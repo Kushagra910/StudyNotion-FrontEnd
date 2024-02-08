@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { sidebarLinks } from "../../../data/dashboard-links";
 import { logout } from "../../../services/operations/authApi";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,7 +17,11 @@ const Sidebar = () => {
   const [confirmationModal, setConfirmationModal] = useState(null);
 
   if (profileLoading || authLoading) {
-    return <div className="spinner"></div>;
+    return (
+      <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   return (
@@ -50,16 +54,14 @@ const Sidebar = () => {
             }
             className="text-sm font-medium text-richblack-300 px-8 py-2 "
           >
-          
-          <div className="flex itmes-center gap-x-2">
-              <VscSignOut className="text-lg"/>
+            <div className="flex itmes-center gap-x-2">
+              <VscSignOut className="text-lg" />
               <span>Logout</span>
-          </div>
+            </div>
           </button>
         </div>
       </div>
-      { 
-        confirmationModal && <ConfirmationModal modalData={confirmationModal}/>}
+      {confirmationModal && <ConfirmationModal modalData={confirmationModal} />}
     </div>
   );
 };

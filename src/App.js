@@ -18,6 +18,9 @@ import Cart from "./components/core/Dashboard/cart/Cart";
 import { ACCOUNT_TYPE } from "./data/constants";
 import { useSelector } from "react-redux";
 import AddCourse from "./components/core/Dashboard/addCourse/addCourse";
+import MyCourses from "./components/core/Dashboard/MyCourses";
+import EditCourse from "./components/core/Dashboard/EditCourse";
+import Catalog from "./pages/Catalog";
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Error = React.lazy(() => import("./pages/Error"));
@@ -26,12 +29,13 @@ const MyProfile = React.lazy(() =>
 );
 
 function App() {
-  const {user} = useSelector((state)=>state.profile);
+  const { user } = useSelector((state) => state.profile);
   return (
     <div className="w-screen min-h-screen  bg-richblack-900 flex flex-col font-inter">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path = "/catalog/:catalogName" element={<Catalog/>}/>
         <Route
           path="/Login"
           element={
@@ -122,11 +126,13 @@ function App() {
           )}
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
-              <Route
-                path="/dashboard/add-course"
-                element={<AddCourse />}
-              />
+              <Route path="/dashboard/add-course" element={<AddCourse />} />
+              <Route path="/dashboard/my-courses" element={<MyCourses />} />
               <Route path="/dashboard/cart" element={<Cart />} />
+              <Route
+                path="/dashboard/edit-course/:courseId"
+                element={<EditCourse />}
+              />
             </>
           )}
         </Route>
