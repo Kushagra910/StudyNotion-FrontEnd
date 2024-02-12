@@ -116,7 +116,7 @@ const Navbar = () => {
         <div className="flex gap-x-4 items-center">
           {user && user.accountType !== "Instructor" && (
             <Link to="/dashboard/cart" className="relative">
-              <BsCart4 />
+              <BsCart4 className="text-richblack-100" size={20} />
               {totalItems > 0 && <span>{totalItems}</span>}
             </Link>
           )}
