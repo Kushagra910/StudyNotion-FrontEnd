@@ -65,3 +65,14 @@ html,body{
       transform: rotate(360deg);
    }
 }
+
+
+/* Buttons */
+
+.yellowButton {
+   @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+ }
+
+ .blackButton {
+   @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+ }
