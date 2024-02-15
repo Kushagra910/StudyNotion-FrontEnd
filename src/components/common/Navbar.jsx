@@ -117,7 +117,7 @@ const Navbar = () => {
           {user && user.accountType !== "Instructor" && (
             <Link to="/dashboard/cart" className="relative">
               <BsCart4 className="text-richblack-100" size={20} />
-              {totalItems > 0 && <span>{totalItems}</span>}
+              {totalItems > 0 && <span className="font-medium text-xs text-richblack-100 bg-[#ee5050] w-5 h-5 flex items-center justify-center animate-bounce rounded-full absolute -top-2 -right-3 ">{totalItems}</span>}
             </Link>
           )}
           {token === null && (
