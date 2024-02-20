@@ -65,19 +65,19 @@ const PublishCourse = () => {
     dispatch(setStep(2));
   };
   return (
-    <div className="rounded-md border-[1px] bg-richblack-800 border-richblack-700 text-white">
-      <h1>Publish Course</h1>
+    <div className="rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6">
+      <h1 className="text-2xl font-semibold text-richblack-5">Publish Course</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="public">
+        <div className="my-6 mb-8">
+          <label htmlFor="public" className="inline-flex items-center text-lg">
             {" "}
             <input
               type="checkbox"
               id="public"
               {...register("public", { required: true })}
-              className="rounded h-4 w-4 "
+              className="border-gray-300 h-4 w-4 rounded bg-richblack-500 text-richblack-400 focus:ring-2 focus:ring-richblack-5"
             />{" "}
-            <span className="ml-3">Make this course as public </span>
+            <span className="ml-2 text-richblack-400">Make this course as public </span>
           </label>
           {errors.public && (<div>Check box not clicked</div>)}
         </div>

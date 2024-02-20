@@ -22,7 +22,9 @@ import MyCourses from "./components/core/Dashboard/MyCourses";
 import EditCourse from "./components/core/Dashboard/EditCourse";
 import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
-
+import ViewCourse from "./pages/ViewCourse";
+import VideoDetails from "./components/core/ViewCourse/VideoDetails";
+import Instructor from './components/core/Dashboard/InstructorDashboard/Instructor'
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Error = React.lazy(() => import("./pages/Error"));
 const MyProfile = React.lazy(() =>
@@ -36,8 +38,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path = "/catalog/:catalogName" element={<Catalog/>}/>
-        <Route path="/courses/:courseId" element={<CourseDetails/>}/>
+        <Route path="/catalog/:catalogName" element={<Catalog />} />
+        <Route path="/courses/:courseId" element={<CourseDetails />} />
         <Route
           path="/Login"
           element={
@@ -90,7 +92,13 @@ function App() {
 
         <Route
           element={
-            <Suspense fallback={<div className="spinner"></div>}>
+            <Suspense
+              fallback={
+                <div className="grid flex-1 place-items-center">
+                  <div className="spinner"></div>
+                </div>
+              }
+            >
               <Dashboard />
             </Suspense>
           }
@@ -99,7 +107,11 @@ function App() {
             path="/dashboard/my-profile"
             element={
               <Suspense
-                fallback={<div className="spinner w-screen h-screen"></div>}
+                fallback={
+                  <div className="grid flex-1 place-items-center">
+                    <div className="spinner"></div>
+                  </div>
+                }
               >
                 <ProtectedRoute>
                   <MyProfile />
@@ -134,6 +146,24 @@ function App() {
               <Route
                 path="/dashboard/edit-course/:courseId"
                 element={<EditCourse />}
+              />
+               <Route path="/dashboard/instructor" element={<Instructor />} />
+            </>
+          )}
+        </Route>
+
+        <Route
+          element={
+            <ProtectedRoute>
+              <ViewCourse />
+            </ProtectedRoute>
+          }
+        >
+          {user?.accountType === ACCOUNT_TYPE.STUDENT && (
+            <>
+              <Route
+                path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
+                element={<VideoDetails />}
               />
             </>
           )}

@@ -104,22 +104,22 @@ const CourseBuilderForm = () => {
   };
 
   return (
-    <div className="text-white">
-      <p>Course Builder</p>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="sectionName">
-            Section name <sup>*</sup>
+    <div className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6">
+      <p className="text-2xl font-semibold text-richblack-5">Course Builder</p>
+      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm text-richblack-5" htmlFor="sectionName">
+            Section name <sup className="text-pink-200">*</sup>
           </label>
           <input
             id="sectionName"
             placeholder="Add section name"
             {...register("sectionName", { required: true })}
-            className="w-full"
+            className="form-style w-full"
           />
-          {errors.sectionName && <span>Section Name is required</span>}
+          {errors.sectionName && <span className="ml-2 text-xs tracking-wide text-pink-200">Section Name is required</span>}
         </div>
-        <div className="mt-10 flex w-full">
+        <div className="flex items-end gap-x-4">
           <IconBtn
             type="Submit"
             text={editSectionName ? "Edit Section " : "Create Section"}
@@ -147,7 +147,7 @@ const CourseBuilderForm = () => {
       <div className="flex justify-end gap-x-3 mt-10">
         <button
           onClick={goBack}
-          className="rounded-md cursor-pointer flex items-center "
+          className="flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-[8px] px-[20px] font-semibold text-richblack-900 "
         >
           Back
         </button>

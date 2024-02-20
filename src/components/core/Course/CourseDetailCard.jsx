@@ -19,7 +19,8 @@ const CourseDetailCard = ({course,setConfirmationModal,handleBuyCourse}) => {
   const navigate = useNavigate();
   const {
     thumbnail : ThumbnailImage,
-    price : CurrentPrice
+    price : CurrentPrice,
+    _id: courseId,
   } = course;
 
 
@@ -67,6 +68,7 @@ const CourseDetailCard = ({course,setConfirmationModal,handleBuyCourse}) => {
                   : handleBuyCourse
               }
             >
+            {console.log("user",user,"STUDENTS ENROLLED",course.studentEnrolled)}
               {user && course?.studentEnrolled.includes(user?._id)
                 ? "Go To Course"
                 : "Buy Now"}
@@ -97,7 +99,7 @@ const CourseDetailCard = ({course,setConfirmationModal,handleBuyCourse}) => {
                 )
               })}
               {
-                course?.instructions.length === 0 && <div>Not</div>
+                course?.instructions.length === 0 && <div>Not Given</div>
               }
             </div>
           </div>
