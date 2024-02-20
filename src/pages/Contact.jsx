@@ -1,6 +1,7 @@
 import React from "react";
 import ContactUsForm from "../components/contactPage/ContactUsForm";
 import Footer from "../components/common/Footer";
+import ReviewSlider from "../components/common/ReviewSlider";
 
 const Contact = () => {
 
@@ -63,8 +64,9 @@ const Contact = () => {
         <section className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         <div className="text-center text-4xl font-semibold mt-8">
           Reviews From Other Learners
-          {/* <ReviewSlider/> */}
         </div>
+                  {/* <ReviewSlider/> */}
+                  <ReviewSlider/>
       </section>
       </div>
       {/* Footer */}

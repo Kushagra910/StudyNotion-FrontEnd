@@ -9,6 +9,7 @@ import Stats from "../components/core/AboutPage/Stats";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
 import Footer from "../components/common/Footer";
+import ReviewSlider from "../components/common/ReviewSlider";
 
 const About = () => {
   return (
@@ -35,13 +36,13 @@ const About = () => {
             <img src={BannerImage2} alt="2" />
             <img src={BannerImage3} alt="3" />
           </div>
-        </section> 
+        </section>
       </div>
 
       {/* Section-2 */}
       <section className=" mx-auto border-b border-richblack-700">
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500">
-        <div className="h-[100px] "></div>
+          <div className="h-[100px] "></div>
           <Quote />
         </div>
       </section>
@@ -50,10 +51,12 @@ const About = () => {
       <section className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500">
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-8 text-richblack-500">
           {/* Founding Story Div */}
-          <div  className="flex flex-col items-center gap-10 md:flex-row justify-between">
+          <div className="flex flex-col items-center gap-10 md:flex-row justify-between">
             {/* left sub-part */}
             <div className="flex md:w-[50%] flex-col gap-10 my-20">
-              <h1  className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text text-4xl font-semibold text-transparent md:w-[70%]">Our Founding Story</h1>
+              <h1 className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text text-4xl font-semibold text-transparent md:w-[70%]">
+                Our Founding Story
+              </h1>
               <p className="text-base font-medium text-richblack-300 md:w-[95%]">
                 Our e-learning platform was born out of a shared vision and
                 passion for transforming education. It all began with a group of
@@ -80,7 +83,9 @@ const About = () => {
           <div className="flex flex-col items-center md:gap-10 md:flex-row justify-between">
             {/* left sub part */}
             <div className="my-24 flex md:w-[45%] flex-col gap-10">
-              <p className="bg-gradient-to-b from-[#FF512F] to-[#F09819] bg-clip-text text-4xl font-semibold text-transparent md:w-[70%] ">Our Vision</p>
+              <p className="bg-gradient-to-b from-[#FF512F] to-[#F09819] bg-clip-text text-4xl font-semibold text-transparent md:w-[70%] ">
+                Our Vision
+              </p>
               <p className="text-base font-medium text-richblack-300 md:w-[95%]">
                 With this vision in mind, we set out on a journey to create an
                 e-learning platform that would revolutionize the way people
@@ -92,7 +97,9 @@ const About = () => {
             </div>
             {/* right sub part  */}
             <div className="my-24 flex md:w-[45%] flex-col gap-10">
-              <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-4xl font-semibold md:w-[70%] ">Our Mission</p>
+              <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-4xl font-semibold md:w-[70%] ">
+                Our Mission
+              </p>
               <p className="text-base font-medium text-richblack-300 md:w-[95%]">
                 our mission goes beyond just delivering courses online. We
                 wanted to create a vibrant community of learners, where
@@ -119,8 +126,9 @@ const About = () => {
       <section className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         <div className="text-center text-4xl font-semibold mt-8">
           Reviews From Other Learners
-          {/* <ReviewSlider/> */}
         </div>
+        {/* <ReviewSlider/> */}
+        <ReviewSlider />
       </section>
 
       {/* Footer */}
