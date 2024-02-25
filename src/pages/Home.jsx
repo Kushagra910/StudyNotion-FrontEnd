@@ -18,13 +18,13 @@ const Home = () => {
   return (
     <div>
       {/* section1 */}
-      <section className="relative mx mx-auto flex flex-col items-start md:items-center w-11/12 text-white justify-between max-w-maxContent z-0 ">
+      <section className="relative mt-20 md:mt-16  mx mx-auto flex flex-col items-start md:items-center w-11/12 text-white justify-between max-w-maxContent ">
         <Link to={"/signup"}>
-          <div className="group mt-16 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit z-0">
+          <div className="group p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit ">
             {" "}
             {/*for-button*/}
-            <div className="flex items-center gap-2 rounded-full px-4 md:px-10 py-[6px] group-hover:bg-richblack-900">
-              <p>Become an Instructor</p>
+            <div className="flex items-center gap-2 rounded-full px-4 md:px-10 py-[6px] group-hover:bg-richblack-900 relative ">
+              <p className="w-full">Become an Instructor</p>
               <FaArrowRight />
             </div>
           </div>

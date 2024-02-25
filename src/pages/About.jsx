@@ -13,10 +13,10 @@ import ReviewSlider from "../components/common/ReviewSlider";
 
 const About = () => {
   return (
-    <div className="text-white  font-inter  ">
+    <div className="text-white  font-inter mt-20 md:mt-0 ">
       {/* Section-1 */}
-      <div className="bg-richblack-800 ">
-        <section className=" w-11/12 max-w-maxContent mx-auto flex flex-col relative lg:h-[618px] lg:p-[80px_120px_0px_120px] lg:gap-[52px] shrink-0">
+      <div className="bg-richblack-800 pt-4 md:pt-0">
+        <section className=" w-11/12 max-w-maxContent mx-auto flex flex-col gap-5 relative lg:h-[618px] lg:p-[80px_120px_0px_120px] lg:gap-[52px] shrink-0">
           <div className="text-richblack-200 mx-auto font-medium">About Us</div>
           <header className="flex flex-col self-stretch lg:w-[913px] lg:p-[0px_52px] gap-4 mx-auto">
             <h1 className="lg:text-4xl font-semibold lg:leading-[44px] lg:tracking-tight flex flex-col items-center">
@@ -31,8 +31,8 @@ const About = () => {
               and nurturing a vibrant learning community.
             </p>
           </header>
-          <div className="flex gap-x-5 absolute -bottom-16  translate-x-[-10%]">
-            <img src={BannerImage1} alt="1" />
+          <div className="flex  flex-col md:flex-row gap-y-4 md:gap-x-5 md:absolute md:-bottom-16  md:translate-x-[-10%] mx-auto mt-12 md:mt-0">
+            <img src={BannerImage1} className="object-cover" alt="1" />
             <img src={BannerImage2} alt="2" />
             <img src={BannerImage3} alt="3" />
           </div>
