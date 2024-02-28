@@ -22,11 +22,11 @@ const MyCourses = () => {
   }, []);
   return (
     <div>
-      <div className="font-inter font-semibold flex flex-col gap-3">
+      <div className="font-inter font-semibold flex flex-col gap-3 mt-20 md:mt-0">
         <div className="flex justify-between items-center">
           <p className="text-richblack-400">
             {`Home / Dashboard / `}{" "}
-            <span className="text-yellow-50">Courses</span>
+            <span className="text-yellow-50 ">Courses</span>
           </p>
           <IconBtn
             text={"Add Course"}

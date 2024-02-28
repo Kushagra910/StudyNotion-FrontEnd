@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <div>
       <h1 className='mb-14 text-3xl font-medium text-richblack-5'>Your Cart</h1>
-      <p className='border-b border-b-richblack-400 pb-2 font-semibold text-rich-black-400'>{totalItems} Courses in Cart</p>
+      <p className='border-b border-b-richblack-400 pb-2 font-semibold text-richblack-400'>{totalItems} Courses in Cart</p>
       {
         totalPrice > 0 ? (<div className='mt-8 flex flex-col-reverse md:flex-row items-start gap-x-10 gap-y-6'>
             <RenderCartCourses/>

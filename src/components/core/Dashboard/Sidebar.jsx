@@ -25,8 +25,8 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="text-richblack-300">
-      <div className="flex min-w-[222px]  flex-col border-r-[1px] border-r-richblack-700 h-full bg-richblack-800 py-10">
+    <div className="text-richblack-300 pt-10 md:pt-0 ">
+      <div className="flex min-w-[150px] md:min-w-[222px]  flex-col border-r-[1px] border-r-richblack-700 h-full bg-richblack-800 py-16">
         <div className="flex flex-col">
           {sidebarLinks.map((link) => {
             if (link.type && user.accountType !== link.type) return null;

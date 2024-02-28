@@ -44,7 +44,7 @@ const InstructorChart = ({ courses }) => {
     maintainAspectRatio: false,
   };
   return (
-    <div className="flex flex-1 flex-col gap-y-4 rounded-md bg-richblack-800 p-6">
+    <div className="flex flex-1  flex-col gap-y-4 rounded-md bg-richblack-800 p-6">
       <p className="text-lg font-bold text-richblack-5">Visualise</p>
       <div className="space-x-4 font-semibold">
         <button
@@ -68,7 +68,7 @@ const InstructorChart = ({ courses }) => {
           Income
         </button>
       </div>
-      <div className="relative mx-auto aspect-square w-full h-full">
+      <div className="relative mx-auto min-w-[200px] w-[250px] aspect-square max-w-md md:w-full md:h-full">
           <Pie
             data={
               currChart === "students"

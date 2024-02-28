@@ -108,7 +108,7 @@ const Catalog = () => {
         </div>
 
         {/* section2 */}
-        <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+        <div className=" mx-auto box-content w-11/12  md:w-full max-w-maxContentTab md:px-4 py-12 lg:max-w-maxContent">
           <div className="section_heading"> 
             Top Courses in {catalogPageData?.data?.selectedCategory?.name}
           </div>
@@ -120,7 +120,7 @@ const Catalog = () => {
         </div>
 
         {/* section3 */}
-        <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+        <div className=" mx-auto box-content w-11/12  md:w-full max-w-maxContentTab md:px-4 py-12 lg:max-w-maxContent">
           <div className="section_heading">Frequently Bought</div>
           <div className="py-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">

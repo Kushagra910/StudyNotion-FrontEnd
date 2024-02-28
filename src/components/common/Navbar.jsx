@@ -54,20 +54,19 @@ const Navbar = () => {
     <div className="flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 z-100">
       <div className="w-11/12 flex max-w-maxContent items-center justify-between">
         {/* Image added */}
-        <Link to="/">
-          <div className="flex flex-row-reverse items-center justify-between">
+        
+          <div className="flex gap-2  flex-row-reverse items-center justify-end md:justify-between">
             {" "}
-            <img src={logo} width={160} height={32} loading="lazy" alt="logo" />
+            <Link to="/"><img src={logo} width={160} height={32} loading="lazy" alt="logo"/></Link>
             <div className="md:hidden flex">
-              <Hamburger color="white" toggled={isOpen} toggle={setOpen} />
+              <Hamburger color="white" toggled={isOpen} toggle={setOpen} size={30}/>
             </div>
           </div>
-        </Link>
 
         {/* Nav links */}
         {
-          isOpen ? (        <nav className={`md:hidden flex relative max-w-maxContent`}>
-          <ul className={` flex  gap-x-6 bg-richblack-500 absolute ${token === null ? "-left-52 " :"-left-60"} top-8 pl-4 pr-4  text-richblack-25 items-center text-md mt-2 rounded-lg z-1000`}>
+          isOpen ? (        <nav className={`md:hidden flex relative max-w-maxContent z-30`}>
+          <ul className={` flex  gap-x-4 bg-richblack-500 absolute ${token === null ? "-left-52 " :"-left-60"} top-8 pl-4 pr-4  text-richblack-25 items-center text-md mt-2 rounded-lg z-1000`}>
             {NavbarLinks.map((element, index) => {
               return (
                 <li key={index}>
@@ -119,7 +118,7 @@ const Navbar = () => {
               );
             })}
           </ul>
-        </nav>) : (<span></span>)
+        </nav>) : (<></>)
         }
 
         <nav className="md:flex hidden">

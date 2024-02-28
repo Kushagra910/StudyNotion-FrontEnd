@@ -36,9 +36,9 @@ const ViewCourse = () => {
 
   return (
     <>
-      <div className="relative flex min-h-[calc(100vh-3.5rem)]">
+      <div className="relative flex flex-col md:flex-row min-h-[calc(100vh-3.5rem)]">
         <ViewDetailsSidebar setReviewModal={setReviewModal} />
-        <div className="h-[calc(100vh-3.5rem) overflow-auto flex-1">
+        <div className="md:h-[calc(100vh-3.5rem) overflow-auto flex-1">
           <div className="mx-auto w-11/12 max-w-[1000px] py-10">
             <Outlet />
           </div>

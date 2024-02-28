@@ -51,9 +51,9 @@ const CourseDetailCard = ({course,setConfirmationModal,handleBuyCourse}) => {
   }
 
   return (
-    <div className='flex flex-col max-w-[384px] rounded-md bg-richblack-700 gap-4 text-richblack-5 '>
+    <div className='flex flex-col md:max-w-[384px] rounded-md bg-richblack-700 gap-4 text-richblack-5 '>
       <img src={ThumbnailImage} alt="ThumbnailImage"
-        className='max-h-[300px] min-h-[180px] overflow-hidden rounded-2xl w-full md:max-w-full object-cover'
+        className='md:max-h-[300px] min-h-[180px] h-full md:overflow-hidden rounded-xl w-full md:max-w-full object-cover'
       />
  <div className="px-4">
           <div className="space-x-3 pb-4 text-3xl font-semibold">

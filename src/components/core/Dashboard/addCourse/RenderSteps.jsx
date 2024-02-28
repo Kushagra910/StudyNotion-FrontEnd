@@ -30,7 +30,7 @@ export default function RenderSteps() {
         {steps.map((item) => (
           <>
             <div
-              className="flex flex-col items-center "
+              className="flex flex-col items-center"
               key={item.id}
             >
               <button
@@ -70,7 +70,7 @@ export default function RenderSteps() {
             >
               
               <p
-                className={`text-sm ${
+                className={` text-sm  ${
                   step >= item.id ? "text-richblack-5" : "text-richblack-500"
                 }`}
               >
